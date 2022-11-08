@@ -6,18 +6,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Mubles extends Model
+class Equipo extends Model
 {
     use HasFactory;
     use SoftDeletes;
     
-    protected $fillable = [
+    protected $fillable =[
         'codPatrimonial',
-        'tipo',
-        'unidadMedida',
-        'estado',
-        'procedencia',
         'ubicacion',
-        'observacion'
+        'tipo',
+        'marca',
+        'tipoDescripcion',
+        'numDescripcion'
     ];
 }

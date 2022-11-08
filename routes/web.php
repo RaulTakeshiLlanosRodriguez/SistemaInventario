@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\EquiposController;
 use App\Http\Controllers\MubleController;
+use App\Http\Controllers\MuebleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +27,6 @@ Auth::routes();
 Route::group(['middleware'=> ['auth'], 'as'=>'admin.'], function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('users', UserController::class);
-    Route::resource('mubles', MubleController::class);
-    Route::resource('equipos', EquiposController::class);
+    Route::resource('muebles', MuebleController::class);
+    Route::resource('equipos', EquipoController::class);
 });

@@ -24,7 +24,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <a href="{{route('admin.mubles.create')}}" class="btn btn-primary mb-3">Nuevo Mueble</a>
+                        <a href="{{route('admin.muebles.create')}}" class="btn btn-primary mb-3">Nuevo Mueble</a>
                         <table class="table table-bordered" id="muble_table">
                             <thead>
                                 <tr>
@@ -39,20 +39,20 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($mubles as $muble)
+                                @foreach($muebles as $mueble)
                                 <tr>
-                                    <td>{{$muble->codPatrimonial}}</td>
-                                    <td>{{$muble->tipo}}</td>
-                                    <td>{{$muble->unidadMedida}}</td>
-                                    <td>{{$muble->estado}}</td>
-                                    <td>{{$muble->procedencia}}</td>
-                                    <td>{{$muble->ubicacion}}</td>
-                                    <td>{{$muble->observacion}}</td>
+                                    <td>{{$mueble->codPatrimonial}}</td>
+                                    <td>{{$mueble->tipo}}</td>
+                                    <td>{{$mueble->unidadMedida}}</td>
+                                    <td>{{$mueble->estado}}</td>
+                                    <td>{{$mueble->procedencia}}</td>
+                                    <td>{{$mueble->ubicacion}}</td>
+                                    <td>{{$mueble->observacion}}</td>
                                     <td>
-                                        <a href="{{route('admin.mubles.edit', $muble->id)}}" class="btn btn-success">
+                                        <a href="{{route('admin.muebles.edit', $mueble->id)}}" class="btn btn-success">
                                             Editar
                                         </a>
-                                        <form action="{{ route('admin.mubles.destroy', $muble->id) }}" id="delete_form" method="POST" onsubmit="return confirm('Esta seguro que desea eliminar el registro?')" style="display: inline-block;">
+                                        <form action="{{ route('admin.muebles.destroy', $mueble->id) }}" id="delete_form" method="POST" onsubmit="return confirm('Esta seguro que desea eliminar el registro?')" style="display: inline-block;">
                                             <input type="hidden" name="_method" value="DELETE">
                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                             <input type="submit" class="btn btn-danger" value="Eliminar">

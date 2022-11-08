@@ -16,13 +16,13 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <form method="POST" action="{{route('admin.mubles.update', $mubles->id)}}">
+                        <form method="POST" action="{{route('admin.muebles.update', $mueble->id)}}">
                             @csrf
                             @method('PUT')
                             <div class="form-group">
                                 <label for="codPatrimonial" class="required">Codigo Patrimonial</label>
                                 <input type="text" name="codPatrimonial" id="codPatrimonial" class="form-control {{$errors->has('codPatrimonial')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('codPatrimonial', $mubles->codPatrimonial)}}">
+                                placeholder="Ingrese el codigo patrimonial" value="{{old('codPatrimonial', $mueble->codPatrimonial)}}">
                                 @if($errors->has('codPatrimonial'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('codPatrimonial')}}</strong>
@@ -32,7 +32,7 @@
                             <div class="form-group">
                                 <label for="tipo" class="required">Tipo</label>
                                 <input type="text" name="tipo" id="tipo" class="form-control {{$errors->has('tipo')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('tipo', $mubles->tipo)}}">
+                                placeholder="Ingrese el codigo patrimonial" value="{{old('tipo', $mueble->tipo)}}">
                                 @if($errors->has('tipo'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('tipo')}}</strong>
@@ -42,7 +42,7 @@
                             <div class="form-group">
                                 <label for="unidadMedida" class="required">Unidad de Medida</label>
                                 <input type="text" name="unidadMedida" id="unidadMedida" class="form-control {{$errors->has('unidadMedida')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('unidadMedida', $mubles->unidadMedida)}}">
+                                placeholder="Ingrese el codigo patrimonial" value="{{old('unidadMedida', $mueble->unidadMedida)}}">
                                 @if($errors->has('unidadMedida'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('unidadMedida')}}</strong>
@@ -52,7 +52,7 @@
                             <div class="form-group">
                                 <label for="estado">Estado</label>
                                 <input type="text" name="estado" id="estado" class="form-control {{$errors->has('estado')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('estado', $mubles->estado)}}">
+                                placeholder="Ingrese el codigo patrimonial" value="{{old('estado', $mueble->estado)}}">
                                 @if($errors->has('estado'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('estado')}}</strong>
@@ -62,7 +62,7 @@
                             <div class="form-group">
                                 <label for="procedencia">Procedencia</label>
                                 <input type="text" name="procedencia" id="procedencia" class="form-control {{$errors->has('procedencia')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('procedencia', $mubles->procedencia)}}">
+                                placeholder="Ingrese el codigo patrimonial" value="{{old('procedencia', $mueble->procedencia)}}">
                                 @if($errors->has('procedencia'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('procedencia')}}</strong>
@@ -72,7 +72,7 @@
                             <div class="form-group">
                                 <label for="ubicacion">Ubicacion</label>
                                 <input type="text" name="ubicacion" id="ubicacion" class="form-control {{$errors->has('ubicacion')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('ubicacion', $mubles->ubicacion)}}">
+                                placeholder="Ingrese el codigo patrimonial" value="{{old('ubicacion', $mueble->ubicacion)}}">
                                 @if($errors->has('ubicacion'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('ubicacion')}}</strong>
@@ -82,7 +82,7 @@
                             <div class="form-group">
                                 <label for="observacion">Observacion</label>
                                 <input type="text" name="observacion" id="observacion" class="form-control {{$errors->has('observacion')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('observacion', $mubles->observacion)}}">
+                                placeholder="Ingrese el codigo patrimonial" value="{{old('observacion', $mueble->observacion)}}">
                                 @if($errors->has('observacion'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('observacion')}}</strong>
@@ -91,7 +91,7 @@
                             </div>
                             <div class="row d-print-none mt-2">
                                 <div class="col-12 text-right">
-                                    <a class="btn btn-danger" href="{{route('admin.mubles.index')}}">
+                                    <a class="btn btn-danger" href="{{route('admin.muebles.index')}}">
                                         <i class="fa fa-fw fa-lg fa-arrow-left"></i>
                                         Regresar
                                     </a>

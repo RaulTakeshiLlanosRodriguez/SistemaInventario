@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreMublesRequest extends FormRequest
+class StoreMuebleRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,25 +24,25 @@ class StoreMublesRequest extends FormRequest
     public function rules()
     {
         return [
-            'codPatrimonial'=>[
+            'codPatrimonial'=> [
                 'required'
             ],
-            'tipo'=>[
+            'tipo'=> [
                 'required'
             ],
-            'unidadMedida'=>[
+            'unidadMedida'=> [
                 'required'
             ],
-            'estado'=>[
-                'nullable' 
-            ],
-            'procedencia'=>[
+            'estado'=> [
                 'nullable'
             ],
-            'ubicacion'=>[
+            'procedencia'=> [
                 'nullable'
             ],
-            'observacion'=>[
+            'ubicacion'=> [
+                'nullable'
+            ],
+            'observacion'=> [
                 'nullable'
             ],
         ];

@@ -16,13 +16,13 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <form method="POST" action="{{route('admin.equipos.update', $equipos->id)}}">
+                        <form method="POST" action="{{route('admin.equipos.update', $equipo->id)}}">
                             @csrf
                             @method('PUT')
                             <div class="form-group">
                                 <label for="codPatrimonial" class="required">Codigo Patrimonial</label>
                                 <input type="text" name="codPatrimonial" id="codPatrimonial" class="form-control {{$errors->has('codPatrimonial')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('codPatrimonial', $equipos->codPatrimonial)}}">
+                                placeholder="Ingrese el codigo patrimonial" value="{{old('codPatrimonial', $equipo->codPatrimonial)}}">
                                 @if($errors->has('codPatrimonial'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('codPatrimonial')}}</strong>
@@ -32,7 +32,7 @@
                             <div class="form-group">
                                 <label for="ubicacion" class="required">Ubicacion</label>
                                 <input type="text" name="ubicacion" id="ubicacion" class="form-control {{$errors->has('ubicacion')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('ubicacion', $equipos->ubicacion)}}">
+                                placeholder="Ingrese el codigo patrimonial" value="{{old('ubicacion', $equipo->ubicacion)}}">
                                 @if($errors->has('ubicacion'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('ubicacion')}}</strong>
@@ -42,7 +42,7 @@
                             <div class="form-group">
                                 <label for="tipo" class="required">Tipo</label>
                                 <input type="text" name="tipo" id="tipo" class="form-control {{$errors->has('tipo')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('unidadMedida', $equipos->tipo)}}">
+                                placeholder="Ingrese el codigo patrimonial" value="{{old('unidadMedida', $equipo->tipo)}}">
                                 @if($errors->has('tipo'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('tipo')}}</strong>
@@ -52,7 +52,7 @@
                             <div class="form-group">
                                 <label for="marca">Marca</label>
                                 <input type="text" name="marca" id="marca" class="form-control {{$errors->has('marca')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('marca', $equipos->marca)}}">
+                                placeholder="Ingrese el codigo patrimonial" value="{{old('marca', $equipo->marca)}}">
                                 @if($errors->has('marca'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('marca')}}</strong>
@@ -62,7 +62,7 @@
                             <div class="form-group">
                                 <label for="tipoDescripcion">Tipo de Descripcion</label>
                                 <input type="text" name="tipoDescripcion" id="tipoDescripcion" class="form-control {{$errors->has('tipoDescripcion')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('tipoDescripcion', $equipos->tipoDescripcion)}}">
+                                placeholder="Ingrese el codigo patrimonial" value="{{old('tipoDescripcion', $equipo->tipoDescripcion)}}">
                                 @if($errors->has('tipoDescripcion'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('tipoDescripcion')}}</strong>
@@ -72,7 +72,7 @@
                             <div class="form-group">
                                 <label for="numDescripcion">Numero de Descripcion</label>
                                 <input type="text" name="numDescripcion" id="numDescripcion" class="form-control {{$errors->has('numDescripcion')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('numDescripcion', $equipos->numDescripcion)}}">
+                                placeholder="Ingrese el codigo patrimonial" value="{{old('numDescripcion', $equipo->numDescripcion)}}">
                                 @if($errors->has('numDescripcion'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('numDescripcion')}}</strong>

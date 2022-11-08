@@ -26,7 +26,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('admin.mubles.index')}}" class="nav-link">
+                            <a href="{{route('admin.muebles.index')}}" class="nav-link">
                                 <i class="nav-icon fas fa-project-diagram"></i>
                                 <p>Muebles y enseres</p>
                             </a>

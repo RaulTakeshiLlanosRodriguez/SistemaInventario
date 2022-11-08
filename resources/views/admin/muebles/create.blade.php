@@ -16,7 +16,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <form method="POST" action="{{route('admin.mubles.store')}}">
+                        <form method="POST" action="{{route('admin.muebles.store')}}">
                             @csrf
                             <div class="form-group">
                                 <label for="codPatrimonial" class="required">Codigo Patrimonial</label>
@@ -90,7 +90,7 @@
                             </div>
                             <div class="row d-print-none mt-2">
                                 <div class="col-12 text-right">
-                                    <a class="btn btn-danger" href="{{route('admin.mubles.index')}}">
+                                    <a class="btn btn-danger" href="{{route('admin.muebles.index')}}">
                                         <i class="fa fa-fw fa-lg fa-arrow-left"></i>
                                         Regresar
                                     </a>

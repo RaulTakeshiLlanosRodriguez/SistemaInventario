@@ -15,7 +15,14 @@ return new class extends Migration
     {
         Schema::create('equipos', function (Blueprint $table) {
             $table->id();
+            $table->string('codPatrimonial');
+            $table->string('ubicacion');
+            $table->string('tipo');
+            $table->string('marca')->nullable();;
+            $table->string('tipoDescripcion')->nullable();;
+            $table->string('numDescripcion')->nullable();;
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

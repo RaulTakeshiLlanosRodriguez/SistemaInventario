@@ -49,9 +49,14 @@
                                 @endif
                             </div>
                             <div class="form-group">
-                                <label for="estado">Estado</label>
-                                <input type="text" name="estado" id="estado" class="form-control {{$errors->has('estado')? 'is-invalid' : ''}}"
-                                placeholder="Ingrese el codigo patrimonial" value="{{old('estado', '')}}">
+                                <label for="exampleFormControlSelect1">Estado</label>
+                                <select class="form-control" name="estado" id="estado" class="form-control {{$errors->has('estado')? 'is-invalid' : ''}}" value="{{old('estado','')}}">
+                                  <option>Bueno</option>
+                                  <option>Regular</option>
+                                  <option>Malo</option>
+                                  <option>Defectuoso</option>
+                                  <option>Obsoleto</option>
+                                </select>
                                 @if($errors->has('estado'))
                                 <span class="text-danger">
                                     <strong>{{$errors ->first('estado')}}</strong>

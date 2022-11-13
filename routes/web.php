@@ -4,6 +4,7 @@ use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\EquiposController;
 use App\Http\Controllers\MubleController;
 use App\Http\Controllers\MuebleController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('report', [ReportController::class, 'report'])->name('report');
 Auth::routes();
 
 Route::group(['middleware'=> ['auth'], 'as'=>'admin.'], function(){

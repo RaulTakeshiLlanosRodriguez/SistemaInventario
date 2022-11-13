@@ -16,9 +16,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">
-                            Bienvenido
-                        </h5>
+                        <a href="{{route('report')}}" class="btn btn-danger">Ver Reporte</a>
                     </div>
                 </div>
             </div>

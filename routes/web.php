@@ -19,11 +19,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+Route::redirect('/','login');
 
 Route::get('report', [ReportController::class, 'report'])->name('report');
+Route::get('reportMueble', [ReportController::class, 'reportMueble'])->name('reportMueble');
+Route::get('reportEquipo', [ReportController::class, 'reportEquipo'])->name('reportEquipo');
 Auth::routes();
 
 Route::group(['middleware'=> ['auth'], 'as'=>'admin.'], function(){

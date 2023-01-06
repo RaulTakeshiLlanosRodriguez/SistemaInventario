@@ -25,6 +25,7 @@
                 <div class="card">
                     <div class="card-body">
                         <a href="{{route('admin.equipos.create')}}" class="btn btn-primary mb-3">Nuevo Equipo</a>
+                        <a href="{{route('reportEquipo')}}" class="btn btn-danger">Ver Reporte</a>
                         <table class="table table-bordered" id="equipo_table">
                             <thead>
                                 <tr>

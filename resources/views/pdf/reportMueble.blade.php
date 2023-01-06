@@ -64,7 +64,6 @@
 </head>
 
 <body>
-
     <div class="container">
         <h1>Listado de Muebles</h1>
         <table class="table">
@@ -90,34 +89,6 @@
                         <td>{{ $mueble->ubicacion }}</td>
                         <td>{{ $mueble->observacion }}</td>
                     </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </div>
-    <div class="page-break"></div>
-    <div class="container">
-        <h1>Listado de Equipos</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Codigo Patrimonial</th>
-                    <th>Ubicacion</th>
-                    <th>Tipo</th>
-                    <th>Marca</th>
-                    <th>Tipo Descripcion</th>
-                    <th>Numero de Descripcion</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($equipos as $equipo)
-                <tr>
-                    <td>{{$equipo->codPatrimonial}}</td>
-                    <td>{{$equipo->ubicacion}}</td>
-                    <td>{{$equipo->tipo}}</td>
-                    <td>{{$equipo->marca}}</td>
-                    <td>{{$equipo->tipoDescripcion}}</td>
-                    <td>{{$equipo->numDescripcion}}</td>
-                </tr>
                 @endforeach
             </tbody>
         </table>

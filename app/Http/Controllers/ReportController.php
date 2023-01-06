@@ -15,4 +15,16 @@ class ReportController extends Controller
         $pdf = SnappyPdf::loadView('pdf.report', compact('muebles','equipos'));
         return $pdf->inline('report.pdf');
     }
+
+    public function reportMueble(){
+        $muebles= Mueble::all();
+        $pdf = SnappyPdf::loadView('pdf.reportMueble', compact('muebles'));
+        return $pdf->inline('reportMueble.pdf');
+    }
+
+    public function reportEquipo(){
+        $equipos= Equipo::all();
+        $pdf = SnappyPdf::loadView('pdf.reportEquipo', compact('equipos'));
+        return $pdf->inline('reportEquipo.pdf');
+    }
 }

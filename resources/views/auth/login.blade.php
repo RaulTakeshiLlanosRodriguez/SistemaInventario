@@ -10,7 +10,10 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
+                        <div class="container-fluid fondo d-flex align-items-center justify-content-center">
+                            <img src="images/imagenPeda.png" alt="login-icon"
+                        style="height: 12rem">
+                        </div>
                         <div class="row mb-3">
                             <label for="email" >Email</label>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -21,7 +24,7 @@
                             </span>
                             @enderror
                         </div>
-                
+
 
                         <div class="row mb-3">
                             <label for="password">Contraseña</label>
@@ -34,7 +37,7 @@
                             </span>
                             @enderror
                 </div>
-                
+
                 <div class="row mb-3">
                     <div >
                         <div class="form-check">

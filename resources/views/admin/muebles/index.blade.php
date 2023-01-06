@@ -25,6 +25,7 @@
                 <div class="card">
                     <div class="card-body">
                         <a href="{{route('admin.muebles.create')}}" class="btn btn-primary mb-3">Nuevo Mueble</a>
+                        <a href="{{route('reportMueble')}}" class="btn btn-danger">Ver Reporte</a>
                         <table class="table table-bordered" id="muble_table">
                             <thead>
                                 <tr>

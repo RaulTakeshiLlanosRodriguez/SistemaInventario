@@ -19,9 +19,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
-});*/
+});
 Route::redirect('/','login');
 
 Route::get('report', [ReportController::class, 'report'])->name('report');
